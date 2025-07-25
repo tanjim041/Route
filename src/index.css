@@ -1,13 +1,80 @@
+/* index.css - Clean Aesthetic Styles */
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Center the app content */
+#root {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Reusable card style for posts & comments */
+.card {
+  background-color: #fff;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  width: 100%;
+  max-width: 800px;
+}
+
+/* Post title */
+.card h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  color: #222;
+}
+
+/* Reaction buttons */
+.reaction-btn {
+  background-color: #e0e0e0;
+  border: none;
+  border-radius: 5px;
+  padding: 0.4rem 0.8rem;
+  margin-right: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.reaction-btn:hover {
+  background-color: #d6d6d6;
+}
+
+.reaction-btn.active {
+  background-color: #cce5ff;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.pagination button {
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #ddd;
+  cursor: pointer;
+}
+
+.pagination button:hover {
+  background-color: #ccc;
+}
+
+.pagination button.active {
+  background-color: #007bff;
+  color: white;
 }
