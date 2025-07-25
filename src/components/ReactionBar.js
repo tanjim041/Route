@@ -18,13 +18,12 @@ function ReactionBar() {
   const [active, setActive] = useState(null);
 
   const handleClick = (reaction) => {
-    if (active === reaction) return; // Already selected
+    if (active === reaction) return; 
 
     setCounts((prev) => {
       const newCounts = { ...prev };
-      if (active) newCounts[active] -= 1; // remove previous
-      newCounts[reaction] += 1;           // add new
-      return newCounts;
+      if (active) newCounts[active] -= 1; 
+      newCounts[reaction] += 1;           
     });
 
     setActive(reaction);
