@@ -38,23 +38,30 @@ function PostPage() {
   return (
     <div style={{ padding: "1rem" }}>
       <h3 style={{ fontWeight: "bold", fontSize: "1.2rem" }}>
-        Lorem Ipsum Dolor Lorem Ipsum Dolor Lorem Ipsum Dolor
+        Your First Step in Programming
       </h3>
       <p>
-        Lorem Ipsum Dolor Lorem Ipsum Dolor Lorem Ipsum Dolor Lorem Ipsum Dolor Lorem Ipsum
+        Every coder remembers their first program — usually something like <strong>"print hello world"</strong>. 
+        It might seem small, but it’s the first step in a long and exciting journey.
       </p>
 
       <div
         style={{
-          backgroundColor: "#5b0000",
-          height: "150px",
           margin: "1rem 0",
           borderRadius: "4px",
+          overflow: "hidden",
         }}
-      ></div>
+      >
+        <img
+          src="/assets/print-hello-world.jpg"
+          alt="Hello World code"
+          style={{ width: "100%", height: "auto", borderRadius: "4px" }}
+        />
+      </div>
 
       <p>
-        Lorem Ipsum Dolor Lorem Ipsum Dolor Lorem Ipsum Dolor Lorem Ipsum
+        That simple output — just two words — marks the beginning of a deeper understanding of logic, problem-solving,
+        and creativity. Let’s talk about your own first experience with code.
       </p>
 
       <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", margin: "1rem 0" }}>
