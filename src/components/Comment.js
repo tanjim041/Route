@@ -41,22 +41,15 @@ function Comment({ comment }) {
   };
 
   return (
-    <div className="card" style={{ marginBottom: "1rem", padding: "1rem", border: "1px solid #ddd", borderRadius: "8px" }}>
+    <div className="card comment-card">
       {/* Header */}
-      <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
-        <div
-          style={{
-            width: "30px",
-            height: "30px",
-            borderRadius: "50%",
-            backgroundColor: "#1e3a8a",
-          }}
-        ></div>
+      <div className="comment-header">
+        <div className="avatar"></div>
         <p style={{ margin: 0 }}>
           <Link to={`/author/${comment.author.id}`} style={{ fontWeight: "bold", color: "#000" }}>
             {comment.author.name}
           </Link>{" "}
-          <span style={{ fontSize: "0.8rem", color: "#555" }}> - {comment.date}</span>
+          <span className="comment-date"> - {comment.date}</span>
         </p>
       </div>
 
@@ -64,29 +57,21 @@ function Comment({ comment }) {
       <p style={{ marginTop: "0.5rem", marginBottom: "0.5rem" }}>{comment.text}</p>
 
       {/* Actions */}
-      <div style={{ fontSize: "0.85rem", marginBottom: "0.5rem" }}>
+      <div className="comment-actions">
         <span
+          className={`like-btn ${userReaction === "like" ? "active" : ""}`}
           onClick={handleLike}
-          style={{
-            marginRight: "1rem",
-            cursor: "pointer",
-            color: userReaction === "like" ? "#1d4ed8" : "black",
-          }}
         >
           👍 Like {likes}
         </span>
         <span
+          className={`dislike-btn ${userReaction === "dislike" ? "active" : ""}`}
           onClick={handleDislike}
-          style={{
-            marginRight: "1rem",
-            cursor: "pointer",
-            color: userReaction === "dislike" ? "#dc2626" : "black",
-          }}
         >
           👎 Dislike {dislikes}
         </span>
         <span
-          style={{ cursor: "pointer" }}
+          className="reply-btn"
           onClick={() => setShowReplyInput(!showReplyInput)}
         >
           💬 Reply
@@ -97,15 +82,15 @@ function Comment({ comment }) {
       {showReplyInput && (
         <div>
           <textarea
+            className="reply-textarea"
             value={replyText}
             onChange={(e) => setReplyText(e.target.value)}
             rows={2}
             placeholder="Write your reply..."
-            style={{ width: "100%", padding: "0.5rem", borderRadius: "5px", border: "1px solid #ccc" }}
           />
           <button
+            className="reply-button"
             onClick={handleReplySubmit}
-            style={{ marginTop: "0.5rem", padding: "0.4rem 0.8rem", borderRadius: "5px", backgroundColor: "#2563eb", color: "white", border: "none" }}
           >
             Post Reply
           </button>
@@ -114,7 +99,7 @@ function Comment({ comment }) {
 
       {/* Replies (if any) */}
       {replies.length > 0 && (
-        <div style={{ marginTop: "1rem", paddingLeft: "1rem", borderLeft: "2px solid #e5e7eb" }}>
+        <div className="replies-container">
           {replies.map((reply, idx) => (
             <p key={idx} style={{ marginBottom: "0.5rem" }}>
               <strong>You:</strong> {reply}

@@ -7,7 +7,6 @@ body {
   color: #333;
 }
 
-
 #root {
   padding: 2rem;
   display: flex;
@@ -15,13 +14,13 @@ body {
   align-items: center;
 }
 
-
+/* Card Component */
 .card {
   background-color: #fff;
   padding: 1.5rem;
   margin: 1rem 0;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
   width: 100%;
   max-width: 800px;
 }
@@ -32,6 +31,7 @@ body {
   color: #222;
 }
 
+/* Reaction Buttons */
 .reaction-btn {
   background-color: #e0e0e0;
   border: none;
@@ -51,7 +51,7 @@ body {
   background-color: #cce5ff;
 }
 
-
+/* Pagination */
 .pagination {
   display: flex;
   gap: 0.5rem;
@@ -74,4 +74,73 @@ body {
 .pagination button.active {
   background-color: #007bff;
   color: white;
+}
+
+/* Comment  */
+.comment-card {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.comment-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #1e3a8a;
+}
+
+.comment-date {
+  font-size: 0.8rem;
+  color: #555;
+}
+
+.comment-actions {
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+.like-btn,
+.dislike-btn,
+.reply-btn {
+  margin-right: 1rem;
+  cursor: pointer;
+  color: black;
+}
+
+.like-btn.active {
+  color: #1d4ed8;
+}
+
+.dislike-btn.active {
+  color: #dc2626;
+}
+
+.reply-textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.reply-button {
+  margin-top: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 5px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+}
+
+.replies-container {
+  margin-top: 1rem;
+  padding-left: 1rem;
+  border-left: 2px solid #e5e7eb;
 }

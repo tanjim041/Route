@@ -36,22 +36,15 @@ function PostPage() {
   };
 
   return (
-    <div style={{ padding: "1rem" }}>
-      <h3 style={{ fontWeight: "bold", fontSize: "1.2rem" }}>
-        Your First Step in Programming
-      </h3>
+    <div className="card">
+      <h3>Your First Step in Programming</h3>
       <p>
-        Every coder remembers their first program — usually something like <strong>"print hello world"</strong>. 
-        It might seem small, but it’s the first step in a long and exciting journey.
+        Every coder remembers their first program — usually something like{" "}
+        <strong>"print hello world"</strong>. It might seem small, but it’s the
+        first step in a long and exciting journey.
       </p>
 
-      <div
-        style={{
-          margin: "1rem 0",
-          borderRadius: "4px",
-          overflow: "hidden",
-        }}
-      >
+      <div className="post-image">
         <img
           src="/assets/print-hello-world.jpg"
           alt="Hello World code"
@@ -60,24 +53,18 @@ function PostPage() {
       </div>
 
       <p>
-        That simple output — just two words — marks the beginning of a deeper understanding of logic, problem-solving,
-        and creativity. Let’s talk about your own first experience with code.
+        That simple output — just two words — marks the beginning of a deeper
+        understanding of logic, problem-solving, and creativity. Let’s talk
+        about your own first experience with code.
       </p>
 
-      <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", margin: "1rem 0" }}>
-        <div
-          style={{
-            width: "40px",
-            height: "40px",
-            borderRadius: "50%",
-            backgroundColor: "#1e3a8a",
-          }}
-        ></div>
+      <div className="comment-header" style={{ margin: "1rem 0" }}>
+        <div className="avatar"></div>
         <div>
           <p style={{ margin: 0, fontWeight: "bold" }}>
             <Link to="/author/123">Author Name</Link>
           </p>
-          <p style={{ margin: 0, fontSize: "0.8rem" }}>7 January 2025</p>
+          <p className="comment-date">7 January 2025</p>
         </div>
       </div>
 
@@ -91,14 +78,14 @@ function PostPage() {
           value={newComment}
           onChange={(e) => setNewComment(e.target.value)}
           placeholder="Write your comment..."
-          style={{ width: "100%", height: "60px", padding: "0.5rem" }}
+          className="reply-textarea"
+          style={{ height: "60px" }}
         />
         <button
           onClick={handleAddComment}
           disabled={!newComment.trim()}
+          className="reply-button"
           style={{
-            marginTop: "0.5rem",
-            padding: "0.5rem 1rem",
             opacity: newComment.trim() ? 1 : 0.5,
             cursor: newComment.trim() ? "pointer" : "not-allowed",
           }}
