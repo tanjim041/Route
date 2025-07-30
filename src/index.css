@@ -14,7 +14,7 @@ body {
   align-items: center;
 }
 
-/* Card Component */
+
 .card {
   background-color: #fff;
   padding: 1.5rem;
@@ -31,7 +31,7 @@ body {
   color: #222;
 }
 
-/* Reaction Buttons */
+
 .reaction-btn {
   background-color: #e0e0e0;
   border: none;
@@ -51,7 +51,7 @@ body {
   background-color: #cce5ff;
 }
 
-/* Pagination */
+
 .pagination {
   display: flex;
   gap: 0.5rem;
@@ -76,7 +76,6 @@ body {
   color: white;
 }
 
-/* Comment  */
 .comment-card {
   padding: 1rem;
   border: 1px solid #ddd;

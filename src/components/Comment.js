@@ -97,7 +97,7 @@ function Comment({ comment }) {
         </div>
       )}
 
-      {/* Replies (if any) */}
+      {}
       {replies.length > 0 && (
         <div className="replies-container">
           {replies.map((reply, idx) => (

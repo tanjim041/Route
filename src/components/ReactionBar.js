@@ -24,7 +24,7 @@ function ReactionBar() {
       const newCounts = { ...prev };
       if (active) newCounts[active] -= 1;
       newCounts[reaction] += 1;
-      return newCounts; // ✅ fix
+      return newCounts; 
     });
 
     setActive(reaction);
